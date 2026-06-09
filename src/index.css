@@ -99,7 +99,6 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-sm);
   padding: 24px;
   transition: box-shadow 0.2s ease;
-  /* allow cards to size to their container instead of forcing a global width/offset */
 }
 
 .btn {

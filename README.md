@@ -16,7 +16,7 @@
 
 ## Contributor
 
-gilmw10 - Frontend, Server, Design
-choihyunjin - Chatting system, Frontend
+- gilmw10 - Frontend, Server, Design  
+- choihyunjin - Chatting system, Frontend  
 
 
