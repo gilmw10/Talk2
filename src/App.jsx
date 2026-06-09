@@ -201,7 +201,6 @@ export default function App() {
 
   return (
     <div className={isLobby ? 'app-fullscreen' : 'app-wrapper'}>
-      {/* 토스트는 항상 화면 위에 고정 */}
       <div className="toast-container">
         {toasts.map((toast) => (
           <div

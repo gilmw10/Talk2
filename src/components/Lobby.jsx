@@ -1,3 +1,5 @@
+//로비에 푸터 안뜨는거 고치기
+
 import React, { useState } from 'react';
 import './Lobby.css';
 

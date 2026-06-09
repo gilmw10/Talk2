@@ -191,11 +191,6 @@
   transition: all 0.18s ease;
 }
 
-.action-card-modern:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
-}
-
 .action-card-header {
   display: flex;
   align-items: center;

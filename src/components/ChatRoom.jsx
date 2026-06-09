@@ -1,3 +1,5 @@
+//알림음끄기 해도 가끔 안꺼지는거 고치기
+
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatRoom.css';
 
