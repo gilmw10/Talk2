@@ -220,7 +220,6 @@ export default function App() {
       </div>
 
       {isLobby ? (
-        /* Lobby: 전체 화면 - app-wrapper 제약 없이 바로 렌더 */
         <Lobby
           username={username}
           setUsername={setUsername}

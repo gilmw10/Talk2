@@ -82,7 +82,6 @@ h1, h2, h3, h4 {
   gap: 20px;
 }
 
-/* Lobby 전용: max-width/padding/margin 제약 없이 전체 화면 */
 .app-fullscreen {
   width: 100vw;
   min-height: 100vh;
@@ -93,8 +92,6 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-
-
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -102,6 +99,7 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-sm);
   padding: 24px;
   transition: box-shadow 0.2s ease;
+  /* allow cards to size to their container instead of forcing a global width/offset */
 }
 
 .btn {

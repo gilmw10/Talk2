@@ -8,15 +8,15 @@
 
 .lobby-brand-header {
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 100px;
   margin: 0;
   z-index: 10;
 }
 
 .lobby-brand-logo-img {
-  width: 291px;
-  height: 59px;
+  width: 180px;
+  height: 40px;
   object-fit: contain;
   display: block;
 }
@@ -41,26 +41,26 @@
 }
 
 .lobby-title-sub {
-  font-size: clamp(70px, 8vw, 140px);
+  font-size: clamp(70px, 5.5vw, 140px);
   font-weight: 800;
   color: var(--color-accent);
-  line-height: 1.05;
+  line-height: 1.55;
   margin-bottom: 16px;
   letter-spacing: -3px;
 }
 
 .lobby-title-main {
-  font-size: clamp(80px, 9vw, 160px);
+  font-size: clamp(80px, 5.5vw, 160px);
   font-weight: 800;
   color: var(--color-text);
   line-height: 1.05;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   letter-spacing: -5px;
   white-space: nowrap;
 }
 
 .lobby-title-desc {
-  font-size: clamp(26px, 2.5vw, 48px);
+  font-size: clamp(26px, 1vw, 48px);
   font-weight: 600;
   color: var(--color-text);
   letter-spacing: -1.5px;
@@ -86,7 +86,7 @@
 }
 
 .nickname-card-title {
-  font-size: clamp(20px, 1.8vw, 28px);
+  font-size: clamp(20px, 1.5vw, 28px);
   font-weight: 800;
   color: var(--color-text);
   margin-bottom: 24px;
@@ -103,8 +103,8 @@
 .nickname-input-wrapper input[type="text"] {
   width: 100%;
   height: clamp(70px, 6vw, 100px);
-  padding: 0 110px 0 36px;
-  font-size: clamp(20px, 1.8vw, 30px);
+  padding: 0 110px 0 20px;
+  font-size: clamp(16px, 1vw, 30px);
   border-radius: 20px;
   border: 2px solid var(--color-border-strong);
   background-color: var(--color-surface);
@@ -161,9 +161,9 @@
 .lobby-cards-container {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2vw, 36px);
+  gap: clamp(12px, 2vw, 24px);
   width: 100%;
-  max-width: 760px;
+  max-width: 340px;
   animation: slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -181,14 +181,14 @@
 
 .action-card-modern {
   background-color: var(--color-surface);
-  border: 1.5px solid var(--color-border);
-  border-radius: 24px;
-  padding: clamp(28px, 2.5vw, 44px) clamp(28px, 2.5vw, 44px);
+  border: 1.25px solid var(--color-border);
+  border-radius: 16px;
+  padding: clamp(18px, 2.5vw, 28px) clamp(18px, 2.5vw, 28px);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 1.5vw, 22px);
-  transition: all 0.2s ease;
+  gap: clamp(10px, 1.5vw, 16px);
+  transition: all 0.18s ease;
 }
 
 .action-card-modern:hover {
@@ -203,9 +203,9 @@
 }
 
 .action-card-icon-box {
-  width: clamp(48px, 3.5vw, 64px);
-  height: clamp(48px, 3.5vw, 64px);
-  border-radius: 16px;
+  width: clamp(40px, 3.5vw, 48px);
+  height: clamp(40px, 3.5vw, 48px);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,21 +225,21 @@
 }
 
 .action-card-icon-box svg {
-  width: clamp(26px, 2vw, 34px);
-  height: clamp(26px, 2vw, 34px);
+  width: clamp(20px, 2vw, 26px);
+  height: clamp(20px, 2vw, 26px);
 }
 
 .action-card-modern h3 {
-  font-size: clamp(20px, 1.8vw, 28px);
+  font-size: clamp(18px, 1.6vw, 22px);
   font-weight: 800;
   color: var(--color-text);
   margin: 0;
 }
 
 .action-card-modern p {
-  font-size: clamp(15px, 1.2vw, 20px);
+  font-size: clamp(14px, 1vw, 16px);
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -253,19 +253,19 @@
 }
 
 .action-card-footer input[type="text"] {
-  height: clamp(52px, 4vw, 68px);
-  padding: 0 20px;
-  font-size: clamp(16px, 1.3vw, 22px);
-  border-radius: 14px;
-  border: 1.5px solid var(--color-border-strong);
+  height: clamp(40px, 3.5vw, 52px);
+  padding: 0 14px;
+  font-size: clamp(14px, 1.1vw, 16px);
+  border-radius: 12px;
+  border: 1.25px solid var(--color-border-strong);
   flex: 1;
 }
 
 .action-card-footer .btn {
-  height: clamp(52px, 4vw, 68px);
-  padding: 0 clamp(24px, 2vw, 40px);
-  font-size: clamp(16px, 1.3vw, 22px);
-  border-radius: 14px;
+  height: clamp(40px, 3.5vw, 52px);
+  padding: 0 clamp(12px, 2vw, 24px);
+  font-size: clamp(14px, 1.1vw, 16px);
+  border-radius: 12px;
 }
 
 @media (max-width: 1024px) {
