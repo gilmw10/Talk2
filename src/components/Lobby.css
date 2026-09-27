@@ -1,35 +1,47 @@
 .lobby-wrapper {
+  --lobby-pad-x: clamp(24px, 6vw, 100px);
+  --lobby-header-h: clamp(72px, 11vh, 110px);
+
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   box-sizing: border-box;
+  /* 로고 이미지 배경색(#F7F8FA)과 동일하게 유지 */
+  background-color: var(--color-bg);
 }
 
 .lobby-brand-header {
-  position: absolute;
-  top: 30px;
-  left: 100px;
-  margin: 0;
+  height: var(--lobby-header-h);
+  padding: 0 var(--lobby-pad-x);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
   z-index: 10;
 }
 
 .lobby-brand-logo-img {
-  width: 125px;
-  height: 40px;
-  object-fit: contain;
+  height: clamp(30px, 4.2vh, 42px);
+  width: auto;
   display: block;
+  /* 로고에 배경이 포함되어 있어 밝은 배경 위에서 경계가 보이지 않도록 */
+  mix-blend-mode: multiply;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .lobby-screen {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
-  padding: 0 100px;
+  padding: 0 var(--lobby-pad-x) var(--lobby-header-h);
   box-sizing: border-box;
-  gap: 60px;
+  gap: clamp(32px, 5vw, 80px);
 }
 
 .lobby-left {
@@ -41,29 +53,29 @@
 }
 
 .lobby-title-sub {
-  font-size: clamp(70px, 5.5vw, 140px);
+  font-size: clamp(44px, 5vw, 130px);
   font-weight: 800;
   color: var(--color-accent);
-  line-height: 1.55;
-  margin-bottom: 16px;
-  letter-spacing: -3px;
+  line-height: 1.2;
+  margin-bottom: 0.15em;
+  letter-spacing: -0.03em;
 }
 
 .lobby-title-main {
-  font-size: clamp(80px, 5.5vw, 160px);
+  font-size: clamp(48px, 5.5vw, 150px);
   font-weight: 800;
   color: var(--color-text);
-  line-height: 1.05;
-  margin-bottom: 25px;
-  letter-spacing: -5px;
+  line-height: 1.1;
+  margin-bottom: 0.35em;
+  letter-spacing: -0.04em;
   white-space: nowrap;
 }
 
 .lobby-title-desc {
-  font-size: clamp(26px, 1vw, 48px);
+  font-size: clamp(18px, 1.6vw, 40px);
   font-weight: 600;
   color: var(--color-text);
-  letter-spacing: -1.5px;
+  letter-spacing: -0.03em;
   margin: 0;
 }
 
@@ -82,14 +94,18 @@
 
 .nickname-container {
   width: 100%;
-  max-width: 760px;
+  max-width: 640px;
+}
+
+.nickname-container .card {
+  padding: clamp(20px, 2vw, 32px);
 }
 
 .nickname-card-title {
-  font-size: clamp(20px, 1.5vw, 28px);
+  font-size: clamp(18px, 1.5vw, 28px);
   font-weight: 800;
   color: var(--color-text);
-  margin-bottom: 24px;
+  margin-bottom: clamp(14px, 1.5vw, 24px);
   text-align: left;
 }
 
@@ -102,10 +118,10 @@
 
 .nickname-input-wrapper input[type="text"] {
   width: 100%;
-  height: clamp(70px, 6vw, 100px);
-  padding: 0 110px 0 20px;
-  font-size: clamp(16px, 1vw, 30px);
-  border-radius: 20px;
+  height: clamp(56px, 5vw, 88px);
+  padding: 0 clamp(72px, 6vw, 100px) 0 clamp(16px, 1.4vw, 24px);
+  font-size: clamp(15px, 1.1vw, 22px);
+  border-radius: clamp(14px, 1.2vw, 20px);
   border: 2px solid var(--color-border-strong);
   background-color: var(--color-surface);
   color: var(--color-text);
@@ -122,12 +138,12 @@
 
 .nickname-submit-btn {
   position: absolute;
-  right: 20px;
-  width: clamp(50px, 4vw, 66px);
-  height: clamp(50px, 4vw, 66px);
+  right: clamp(8px, 0.9vw, 14px);
+  width: clamp(42px, 3.8vw, 62px);
+  height: clamp(42px, 3.8vw, 62px);
   background-color: var(--color-accent);
   border: none;
-  border-radius: 14px;
+  border-radius: clamp(10px, 1vw, 14px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,8 +167,8 @@
 }
 
 .nickname-submit-btn svg {
-  width: clamp(24px, 2vw, 32px);
-  height: clamp(24px, 2vw, 32px);
+  width: clamp(20px, 1.8vw, 30px);
+  height: clamp(20px, 1.8vw, 30px);
   stroke: currentColor;
   stroke-width: 3;
   fill: none;
@@ -161,9 +177,9 @@
 .lobby-cards-container {
   display: flex;
   flex-direction: column;
-  gap: clamp(12px, 2vw, 24px);
+  gap: clamp(12px, 1.6vw, 20px);
   width: 100%;
-  max-width: 340px;
+  max-width: 380px;
   animation: slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -183,23 +199,24 @@
   background-color: var(--color-surface);
   border: 1.25px solid var(--color-border);
   border-radius: 16px;
-  padding: clamp(18px, 2.5vw, 28px) clamp(18px, 2.5vw, 28px);
+  padding: clamp(16px, 1.8vw, 26px);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: clamp(10px, 1.5vw, 16px);
+  gap: clamp(8px, 1vw, 14px);
+  min-width: 0;
   transition: all 0.18s ease;
 }
 
 .action-card-header {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .action-card-icon-box {
-  width: clamp(40px, 3.5vw, 48px);
-  height: clamp(40px, 3.5vw, 48px);
+  width: clamp(38px, 3vw, 46px);
+  height: clamp(38px, 3vw, 46px);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -220,75 +237,156 @@
 }
 
 .action-card-icon-box svg {
-  width: clamp(20px, 2vw, 26px);
-  height: clamp(20px, 2vw, 26px);
+  width: clamp(20px, 1.6vw, 24px);
+  height: clamp(20px, 1.6vw, 24px);
 }
 
 .action-card-modern h3 {
-  font-size: clamp(18px, 1.6vw, 22px);
+  font-size: clamp(17px, 1.4vw, 22px);
   font-weight: 800;
   color: var(--color-text);
   margin: 0;
+  word-break: keep-all;
 }
 
 .action-card-modern p {
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: clamp(13px, 0.95vw, 16px);
   color: var(--color-text-muted);
   line-height: 1.5;
   margin: 0;
+  word-break: keep-all;
 }
 
 .action-card-footer {
-  margin-top: 4px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 .action-card-footer.flex-row {
   display: flex;
-  gap: 14px;
+  gap: 10px;
 }
 
 .action-card-footer input[type="text"] {
-  height: clamp(40px, 3.5vw, 52px);
+  height: clamp(42px, 3.2vw, 50px);
   padding: 0 14px;
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-size: clamp(14px, 1vw, 16px);
   border-radius: 12px;
   border: 1.25px solid var(--color-border-strong);
   flex: 1;
+  min-width: 0;
 }
 
 .action-card-footer .btn {
-  height: clamp(40px, 3.5vw, 52px);
-  padding: 0 clamp(12px, 2vw, 24px);
-  font-size: clamp(14px, 1.1vw, 16px);
+  height: clamp(42px, 3.2vw, 50px);
+  padding: 0 clamp(14px, 1.6vw, 22px);
+  font-size: clamp(14px, 1vw, 16px);
   border-radius: 12px;
 }
 
+/* 세로 배치: 화면 분할(반쪽 창), 태블릿 */
 @media (max-width: 1024px) {
+  .lobby-wrapper {
+    --lobby-header-h: clamp(64px, 10vh, 96px);
+  }
+
+  .lobby-brand-header {
+    justify-content: center;
+  }
+
   .lobby-screen {
     flex-direction: column;
     justify-content: center;
-    padding: 120px 60px 60px;
-    gap: 50px;
+    padding-bottom: clamp(24px, 6vh, 64px);
+    gap: clamp(28px, 6vh, 64px);
   }
 
   .lobby-left {
+    flex: none;
     align-items: center;
     text-align: center;
   }
 
-  .lobby-brand-header {
-    top: 36px;
-    left: 50%;
-    transform: translateX(-50%);
+  /* 가로·세로 중 좁은 쪽 기준으로 크기 조절 → 반쪽 창에서도 한 화면에 들어오도록 */
+  .lobby-title-sub {
+    font-size: clamp(36px, min(9vw, 8vh), 104px);
+  }
+
+  .lobby-title-main {
+    font-size: clamp(38px, min(10vw, 9vh), 116px);
+  }
+
+  .lobby-title-desc {
+    font-size: clamp(17px, min(3vw, 2.8vh), 30px);
   }
 
   .lobby-right {
+    flex: none;
     justify-content: center;
     width: 100%;
   }
 
-  .nickname-container,
+  .nickname-container {
+    max-width: 560px;
+  }
+
+  .nickname-card-title {
+    font-size: clamp(18px, 2.4vw, 24px);
+  }
+
+  .nickname-input-wrapper input[type="text"] {
+    height: clamp(54px, 7vh, 72px);
+    font-size: 16px;
+    padding-right: 72px;
+  }
+
+  .nickname-submit-btn {
+    width: clamp(40px, 5.4vh, 54px);
+    height: clamp(40px, 5.4vh, 54px);
+  }
+
+  /* 카드 3개를 가로로 배치해 세로 공간 절약 */
   .lobby-cards-container {
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 880px;
+  }
+
+  .action-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .action-card-modern h3 {
+    font-size: 17px;
+  }
+
+  .action-card-modern p {
+    font-size: 13px;
+  }
+
+  .action-card-footer input[type="text"],
+  .action-card-footer .btn {
+    height: 42px;
+    font-size: 14px;
+  }
+}
+
+/* 좁은 창: 카드 세로 나열 + 헤더 가로 배치 복귀 */
+@media (max-width: 640px) {
+  .lobby-cards-container {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+
+  .action-card-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lobby-title-main {
+    white-space: normal;
+    word-break: keep-all;
   }
 }
